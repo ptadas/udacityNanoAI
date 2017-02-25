@@ -3,11 +3,11 @@
 
 # Question 1 (Naked Twins)
 Q: How do we use constraint propagation to solve the naked twins problem?  
-A: *Student should provide answer here*
+A: Based on the given information we now that naked twins can exist in each unit (rows, cols, 3x3 squares). Therefore we check if naked twins exist in a unit, if they do, we eliminate these values from boxes within the same unit, thus reducing the available choices for the puzzle.
 
 # Question 2 (Diagonal Sudoku)
 Q: How do we use constraint propagation to solve the diagonal sudoku problem?  
-A: *Student should provide answer here*
+A: In diagonal sudoku, the additional constraint is that numbers cannot repeat in the same diagonal. Therefore we create an additional unit (diagonals) and append it to the unitlist, which is essentially the list of constraints that we have to satisfy. By iteratively applying the existing functions (eliminate, only_choice and naked_twins) to the new constraint list we're able to reduce the puzzle and solve it eventually.
 
 ### Install
 
